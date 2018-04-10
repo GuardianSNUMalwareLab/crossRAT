@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: crossrat.client
+
+Name: org/jnativehook
+Specification-Title: JNativeHook Library
+Implementation-Title: org.jnativehook
+Implementation-Version: 3
+Specification-Version: 2.0
+Specification-Vendor: Alexander Barker (alex@1stleg.com)
+Implementation-Vendor: Alexander Barker (alex@1stleg.com)
+
