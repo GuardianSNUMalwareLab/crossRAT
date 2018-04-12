@@ -23,7 +23,7 @@ public final class b {
       File var10000 = var0;
       boolean var3 = true;
       var0 = var10000;
-      d(var10000, var1);
+      d(var10000, var1);    // same to d(var0, var1);
       if (var0.isDirectory()) {
          throw new IOException("Source '" + var0 + "' exists but is a directory");
       } else if (var0.getCanonicalPath().equals(var1.getCanonicalPath())) {
@@ -35,11 +35,12 @@ public final class b {
          } else if (var1.exists() && !var1.canWrite()) {
             throw new IOException("Destination '" + var1 + "' exists but is read-only");
          } else {
-            a(var0, var1, true);
+            a(var0, var1, true);    // 밑에 보이는 a(File, File, boolean) 메소드를 부른다. 난독화 실화?
          }
       }
    }
 
+   // var0의 내용을 var1에다가 복사한다 (????) 아마도 (??????)
    private static void a(File var0, File var1, boolean var2) {
       if (var1.exists() && var1.isDirectory()) {
          throw new IOException("Destination '" + var1 + "' exists but is a directory");

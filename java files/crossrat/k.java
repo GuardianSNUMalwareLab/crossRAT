@@ -4,6 +4,7 @@ import java.net.Socket;
 import java.util.UUID;
 import java.util.prefs.Preferences;
 
+// 뭔가 수상해보이는 글자들이 많이 보이는 클래스. 아마 문자열 저장용인 듯 하다.
 public final class k {
    public static boolean a = false;
    public static String b = "flexberry.com";

