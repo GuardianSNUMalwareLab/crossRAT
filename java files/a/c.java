@@ -2,6 +2,7 @@ package a;
 
 import a.b.g;
 
+// OS type enum
 public enum c {
    a("Windows", new String[]{"win"}),
    b("macOS", new String[]{"mac"}),
@@ -11,8 +12,8 @@ public enum c {
    f("unknown", new String[]{"unknown"});
 
    private static a g;
-   private String h;
-   private String[] i;
+   private String h; // Name?
+   private String[] i; // Synonyms?
 
    private c(String var3, String... var4) {
       this.h = var3;
@@ -23,6 +24,7 @@ public enum c {
       return this.h;
    }
 
+   // OS detection
    public static a b() {
       boolean var0 = true;
       Object var5 = null;
