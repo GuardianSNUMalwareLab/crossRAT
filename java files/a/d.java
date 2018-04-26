@@ -1,5 +1,6 @@
 package a;
 
+// An additional abstraction over a, adds an optional string that has a default value.
 public abstract class d extends a {
    private String a;
 
