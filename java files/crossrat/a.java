@@ -40,6 +40,7 @@ final class a extends Thread {
 
       try {
          var2.writeBytes(k.g + k.d + k.D + k.d + this.b + k.d + "&&&");
+         // [k.g]$#@@0007$#@[1 or 2]$#@&&&
       } catch (Exception var4) {
          var4.printStackTrace();
       }
