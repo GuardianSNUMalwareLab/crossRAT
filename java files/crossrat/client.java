@@ -108,6 +108,7 @@ public class client {
                            e.a();
                            (new f()).start();
                         } else if (var21[0].equals(k.n)) {
+                           // send file list of path "var21[1]\" to server
                            (new c(var21[1])).start();
                         } else if (var21[0].equals(k.o)) {
                            (new a(var21[1])).start();
