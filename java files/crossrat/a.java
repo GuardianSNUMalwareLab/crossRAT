@@ -16,11 +16,12 @@ final class a extends Thread {
       DataOutputStream var2 = null;
 
       try {
+         // open new connection to k.k
          var2 = new DataOutputStream(k.k.getOutputStream());
       } catch (Exception var6) {
          var6.printStackTrace();
       }
-
+      // if directory is not exists, 원하는 file directory 생성
       if (!var1.exists()) {
          boolean var3;
          try {
