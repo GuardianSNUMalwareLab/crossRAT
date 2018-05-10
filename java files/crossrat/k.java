@@ -16,6 +16,7 @@ public final class k {
    public static Preferences h;
    public static String i = "0.1";
    public static String j = "GROUP2";
+   // client.java에서 assign됨. flexberry.com에 연결되는 Socket.
    public static Socket k;
    public static Socket l;
    public static String m = "@0000";
