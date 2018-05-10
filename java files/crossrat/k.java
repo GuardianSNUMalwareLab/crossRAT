@@ -12,12 +12,14 @@ public final class k {
    public static String d = "$#@";
    public static String e = "^!@";
    public static UUID f;
+   // k.g, k.h는 crossrat/client.java에서 assign됨. 랜덤 UUID에 대한 내용인 듯
    public static String g;
    public static Preferences h;
    public static String i = "0.1";
    public static String j = "GROUP2";
-   // client.java에서 assign됨. flexberry.com에 연결되는 Socket.
+   // Socket k.k: crossrat/client.java에서 assign됨. flexberry.com에 연결되는 Socket.
    public static Socket k;
+   // Socket k.l: crossrat/f.java에서 assign됨. k.k와 같은데 Timeout이 설정되지 않음
    public static Socket l;
    public static String m = "@0000";
    public static String n = "@0001";
