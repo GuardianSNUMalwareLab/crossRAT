@@ -4,14 +4,16 @@ import osprobe.c;
 
 import java.io.Serializable;
 
-public final class a extends a.a implements Serializable {
-    private b a;
+public final class a extends osprobe.a implements Serializable {
+    // private b a;
+    private WindowsTypes a;
 
     public a() {
-        this(b.b(), a.b.a());
+        this(WindowsTypes.b(), osprobe.b.a());
+        // this(WindowsTypes.findWindowsTypes(), osprobe.ArchitectureTypes.a());
     }
 
-    private a(b var1, a.b var2) {
+    private a(WindowsTypes var1, osprobe.b var2) {
         super(c.a, var2);
         this.a = var1;
     }
