@@ -1,4 +1,4 @@
-package osprobe.d;
+package osprobe.solaris;
 
 import osprobe.b;
 import osprobe.c;

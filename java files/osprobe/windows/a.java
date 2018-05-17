@@ -1,11 +1,11 @@
-package osprobe.e;
+package osprobe.windows;
 
 import osprobe.c;
 
 import java.io.Serializable;
 
 public final class a extends osprobe.a implements Serializable {
-    // private b a;
+
     private WindowsTypes a;
 
     public a() {

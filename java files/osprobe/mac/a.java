@@ -1,4 +1,4 @@
-package osprobe.c;
+package osprobe.mac;
 
 import crossrat.e;
 
@@ -13,7 +13,7 @@ public final class a {
             Iterator var2 = e.a(var1).iterator();
 
             while (var2.hasNext()) {
-                if (((String) var2.next()).contains(a.c.b.a())) {
+                if (((String) var2.next()).contains(osprobe.c.b.a())) {
                     return true;
                 }
             }

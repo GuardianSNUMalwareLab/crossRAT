@@ -1,4 +1,4 @@
-package osprobe.e;
+package osprobe.windows;
 
 public enum WindowsTypes {
     a("Unknown Windows"),
@@ -16,6 +16,8 @@ public enum WindowsTypes {
     // private String l;
     private String name;
 
+    // TODO Refactor
+    /*
     // private b(String var3)
     private WindowsTypes(String name) {
     	// this.l = var3;
@@ -42,13 +44,29 @@ public enum WindowsTypes {
         	if (type != a && type.name.equalsIgnoreCase(osName)) {
         		return type;
         	}
+     */
+
+    private WindowsTypes(String var3) {
+        this.l = var3;
+    }
+
+    public static WindowsTypes b() {
+        String var0 = System.getProperty("os.name");
+        WindowsTypes[] var4;
+        int var3 = (var4 = values()).length;
+
+        for (int var2 = 0; var2 < var3; ++var2) {
+            WindowsTypes var1;
+            if ((var1 = var4[var2]) != a && var1.l.equalsIgnoreCase(var0)) {
+                return var1;
+            }
         }
 
         return a;
     }
 
     public final String a() {
-    // public final String toString() {
+        // public final String toString() {
         return this.name;
     }
 }

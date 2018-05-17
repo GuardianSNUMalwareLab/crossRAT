@@ -1,7 +1,5 @@
 package crossrat;
 
-import java.io.*;
-
 final class c extends Thread {
     private String a;
 

@@ -5,10 +5,7 @@ import org.jnativehook.b.d;
 import org.jnativehook.c;
 import org.jnativehook.e;
 
-import javax.swing.*;
 import javax.swing.text.BadLocationException;
-import java.awt.*;
-import java.awt.event.*;
 import java.util.concurrent.ExecutorService;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;

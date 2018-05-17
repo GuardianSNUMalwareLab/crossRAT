@@ -1,6 +1,6 @@
 package osprobe.linux;
 
-public enum c {
+public enum LinuxTypes {
     e("Alpine Linux", new Object[]{"alpine", new f("/etc/arch-release")}),
     f("Antergos", new Object[0]),
     g("Arch Linux", new Object[]{"archlinux", "archarm"}),
@@ -54,7 +54,7 @@ public enum c {
     private String X;
     private Object[] Y;
 
-    private c(String var3, Object... var4) {
+    private LinuxTypes(String var3, Object... var4) {
         this.X = var3;
         this.Y = var4;
     }
