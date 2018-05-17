@@ -224,6 +224,8 @@ public final class b {
         }
     }
 
+    // var0이 directory면 c(var0)을 호출하고 파일이면 아무것도 안 한다.
+    // 그리고 파일인지 디렉토리인지에 무관하게 그것을 삭제한다.
     public static boolean a(File var0) {
         try {
             if (var0.isDirectory()) {
@@ -240,6 +242,7 @@ public final class b {
         }
     }
 
+    // maybe delete
     private static void c(File var0) {
         String var10;
         if (!var0.exists()) {
@@ -249,12 +252,13 @@ public final class b {
             var10 = var0 + " is not a directory";
             throw new IllegalArgumentException(var10);
         } else {
+            // if var0 is directory
             File[] var5;
             if ((var5 = var0.listFiles()) == null) {
                 throw new IOException("Failed to list contents of " + var0);
             } else {
                 IOException var1 = null;
-                File[] var7 = var5;
+                File[] var7 = var5; // var7: var0.listFiles()
                 int var2 = var5.length;
 
                 for (int var3 = 0; var3 < var2; ++var3) {
@@ -262,6 +266,7 @@ public final class b {
 
                     try {
                         if (var4.isDirectory()) {
+                            // maybe delete recursively..?
                             b(var4);
                         } else {
                             boolean var9 = var4.exists();

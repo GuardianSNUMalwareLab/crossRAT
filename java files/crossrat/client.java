@@ -107,7 +107,7 @@ public class client {
                                 } else if (var21[0].equals(k.n)) { // @0001
                                     // send file list of path "var21[1]\" to server
                                     (new c(var21[1])).start();
-                                } else if (var21[0].equals(k.o)) {
+                                } else if (var21[0].equals(k.o)) {  // @0002
                                     // make directory that's full path is "var21[1]"
                                     /*
                                      * this function will send server some code
@@ -116,7 +116,7 @@ public class client {
                                      * 2: already exist
                                      */
                                     (new a(var21[1])).start();
-                                } else if (var21[0].equals(k.p)) {
+                                } else if (var21[0].equals(k.p)) {  // @0003
                                     (new b(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.q)) {
                                     (new h(var21[1], var21[2])).start();
