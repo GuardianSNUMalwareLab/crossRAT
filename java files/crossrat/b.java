@@ -18,6 +18,7 @@ final class b extends Thread {
         DataOutputStream var2 = null;
 
         try {
+            // var2: Socket에 연결된 DataOutputStream
             var2 = new DataOutputStream(k.k.getOutputStream());
         } catch (Exception var5) {
             var5.printStackTrace();
@@ -34,7 +35,7 @@ final class b extends Thread {
         } else {
             var6 = "2";
         }
-        //var6 - 1: var1 파일 존재, 디렉토리 존재 / 0: var1 파일 존재, 디렉토리 존재X / 2: var1 파일 존재X
+        // var6 - 1: var1 파일 존재, 디렉토리 존재 / 0: var1 파일 존재, 디렉토리 존재X / 2: var1 파일 존재X
 
         try {
             // [k.g]$#@@0008$#@[1 or 0 or 2]$#@[this.c]$#@&&&
