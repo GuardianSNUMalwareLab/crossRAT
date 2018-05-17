@@ -117,18 +117,20 @@ public class client {
                                      */
                                     (new a(var21[1])).start();
                                 } else if (var21[0].equals(k.p)) {  // @0003
+                                    // var21[1]을 삭제하고, var21[2]를 포함한 어떤 메시지를 k.k Socket을 통해서 서버로 보낸다.
+                                    // TODO Analyze more
                                     (new b(var21[1], var21[2])).start();
-                                } else if (var21[0].equals(k.q)) {
+                                } else if (var21[0].equals(k.q)) {  // @0004
                                     (new h(var21[1], var21[2])).start();
-                                } else if (var21[0].equals(k.r)) {
+                                } else if (var21[0].equals(k.r)) {  // @0005
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "0")).start();
-                                } else if (var21[0].equals(k.s)) {
+                                } else if (var21[0].equals(k.s)) {  // @0006
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "1")).start();
-                                } else if (var21[0].equals(k.t)) {
+                                } else if (var21[0].equals(k.t)) {  // @0007
                                     (new g()).start();
-                                } else if (var21[0].equals(k.u)) {
+                                } else if (var21[0].equals(k.u)) {  // @0008
                                     (new j(k.b, k.c)).start();
-                                } else if (var21[0].equals(k.v)) {
+                                } else if (var21[0].equals(k.v)) {  // @0009
                                     (new i(var21[1])).start();
                                 }
                             } catch (Exception var10) {
