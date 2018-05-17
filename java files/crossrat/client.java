@@ -121,6 +121,7 @@ public class client {
                                 } else if (var21[0].equals(k.q)) {
                                     // mv var21[1] to var21[2], don't care wheater this is file or dir
                                     /*
+                                     * ex in linux) mv "var21[1]" "var21[2]"
                                      * 0: failed due to security exception
                                      * 1: succeeded
                                      * 2: var21[2] is already existing
@@ -131,6 +132,8 @@ public class client {
                                 } else if (var21[0].equals(k.s)) {
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "1")).start();
                                 } else if (var21[0].equals(k.t)) {
+                                    // send random UID to server
+                                    // "(random UID) + $#@ + @0001 + $#@ + &&&"
                                     (new g()).start();
                                 } else if (var21[0].equals(k.u)) {
                                     (new j(k.b, k.c)).start();
