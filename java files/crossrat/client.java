@@ -119,6 +119,12 @@ public class client {
                                 } else if (var21[0].equals(k.p)) {
                                     (new b(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.q)) {
+                                    // mv var21[1] to var21[2], don't care wheater this is file or dir
+                                    /*
+                                     * 0: failed due to security exception
+                                     * 1: succeeded
+                                     * 2: var21[2] is already existing
+                                     */
                                     (new h(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.r)) {
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "0")).start();
