@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 public final class e {
     static {
         char var10000 = File.separatorChar;
-        org.a.a.a.a.a var0 = new org.a.a.a.a.a(4);
+        org.a.a.a.writer.a var0 = new org.a.a.a.writer.a(4);
         PrintWriter var1;
         (var1 = new PrintWriter(var0)).println();
         var1.close();

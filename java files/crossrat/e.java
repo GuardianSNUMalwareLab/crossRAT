@@ -251,7 +251,7 @@ public class e {
                 }
                 if (localObject1 != null) {
                     (localObject5 = new d((c) localObject1)).a((String) localObject3);
-                    return (d) localObject5;
+                    return (osprobe.linux.d) localObject5;
                 }
             }
         } catch (Exception localException5) {

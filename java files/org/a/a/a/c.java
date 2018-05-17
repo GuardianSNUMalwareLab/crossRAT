@@ -8,8 +8,8 @@ final class c implements FileFilter {
     private File a;
 
     c(File var1) {
-        this.a = var1;
         super();
+        this.a = var1;
     }
 
     public final boolean accept(File var1) {

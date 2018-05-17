@@ -1,4 +1,4 @@
-package org.a.a.a.a;
+package org.a.a.a.writer;
 
 import java.io.Serializable;
 import java.io.Writer;
