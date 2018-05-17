@@ -31,14 +31,17 @@ final class h extends Thread {
                 // success to rename path (move directory or file to var2)
                 this.c = "1";
             } catch (IOException var6) {
+                // failed due to exception
                 this.c = "0";
                 var6.printStackTrace();
             }
         } else {
+            // already existing file or dir that's name is var2
             this.c = "2";
         }
 
         try {
+            // send state code to server
             var3.writeBytes(k.g + k.d + k.F + k.d + this.c + k.d + "&&&");
         } catch (Exception var5) {
             var5.printStackTrace();

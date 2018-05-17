@@ -6,6 +6,7 @@ import java.io.InterruptedIOException;
 final class g extends Thread {
     public final void run() {
         try {
+            // send "(random UID) + $#@ + @0001 + $#@ + &&&"
             (new DataOutputStream(k.k.getOutputStream())).writeBytes(k.g + k.d + k.x + k.d + "&&&");
         } catch (InterruptedIOException var2) {
             Thread.currentThread().interrupt();
