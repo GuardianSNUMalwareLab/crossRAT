@@ -115,7 +115,7 @@ public class e {
         return var0;
     }
 
-    public static a.a.b a(boolean var0) {
+    public static osprobe.bsd.b a(boolean var0) {
         List var1 = null;
 
         try {
