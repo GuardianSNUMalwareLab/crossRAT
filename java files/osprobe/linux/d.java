@@ -3,14 +3,14 @@ package osprobe.linux;
 import java.io.Serializable;
 
 public final class d implements Serializable {
-    private c a;
+    private LinuxTypes a;
     private String b;
 
-    public d(c var1) {
+    public d(LinuxTypes var1) {
         this.a = var1;
     }
 
-    public final c a() {
+    public final LinuxTypes a() {
         return this.a;
     }
 

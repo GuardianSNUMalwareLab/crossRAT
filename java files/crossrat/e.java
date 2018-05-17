@@ -124,32 +124,32 @@ public class e {
             var4.printStackTrace();
         }
 
-        a.a.b var5;
+        osprobe.bsd.b var5;
         if (var1 != null) {
             Iterator var3 = var1.iterator();
 
             while (var3.hasNext()) {
-                if ((var5 = a.a.b.a((String) var3.next())) != null) {
+                if ((var5 = osprobe.bsd.b.a((String) var3.next())) != null) {
                     return var5;
                 }
             }
         }
 
-        return var0 && (var5 = a.a.b.a(System.getProperty("os.name"))) != null ? var5 : null;
+        return var0 && (var5 = osprobe.bsd.b.a(System.getProperty("os.name"))) != null ? var5 : null;
     }
 
-    public static a.b.d d() {
+    public static osprobe.linux.d d() {
         // DECOMPILE FAILED: used other decompiler's code
         Object localObject1 = null;
         try {
-            localObject2 = null;
+            Object localObject2 = null;
             Object localObject3 = null;
             int i = 0;
             List localList = null;
             try {
                 i = (localList = a(tmp20_15)).size() == 3 ? 1 : 0;
             } catch (Exception localException1) {
-                (localObject4 = localException1).printStackTrace();
+                localException1.printStackTrace();
             }
             Object localObject4 = null;
             Map localMap = null;

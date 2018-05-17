@@ -1,6 +1,6 @@
-package osprobe.e;
+package osprobe.windows;
 
-public enum WindowTypes {
+public enum WindowsTypes {
     a("Unknown Windows"),
     b("Windows 2000"),
     c("Windows XP"),
@@ -15,17 +15,17 @@ public enum WindowTypes {
 
     private String l;
 
-    private b(String var3) {
+    private WindowsTypes(String var3) {
         this.l = var3;
     }
 
-    public static b b() {
+    public static WindowsTypes b() {
         String var0 = System.getProperty("os.name");
-        b[] var4;
+        WindowsTypes[] var4;
         int var3 = (var4 = values()).length;
 
         for (int var2 = 0; var2 < var3; ++var2) {
-            b var1;
+            WindowsTypes var1;
             if ((var1 = var4[var2]) != a && var1.l.equalsIgnoreCase(var0)) {
                 return var1;
             }

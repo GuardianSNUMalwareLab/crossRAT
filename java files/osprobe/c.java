@@ -12,11 +12,11 @@ public enum c {
     f("unknown", new String[]{"unknown"});
 
     private static a g;
-    private String h; // Name?
+    private String name; // Name?
     private String[] i; // Synonyms?
 
     private c(String var3, String... var4) {
-        this.h = var3;
+        this.name = var3;
         this.i = var4;
     }
 
@@ -46,8 +46,8 @@ public enum c {
                 var5 = new g(crossrat.e.d());
             }
 
-            if (a.c.a.a(true)) {
-                var5 = new a.c.b();
+            if (osprobe.mac.a.a(true)) {
+                var5 = new osprobe.mac.b();
             }
 
             var6 = true;
@@ -60,7 +60,7 @@ public enum c {
             }
 
             if (var10) {
-                var5 = new a.e.a();
+                var5 = new osprobe.windows.a();
             }
 
             label56:
@@ -84,7 +84,7 @@ public enum c {
             }
 
             if (var10) {
-                var5 = new a.d.a();
+                var5 = new osprobe.solaris.a();
             }
 
             if (var5 == null) {
@@ -105,6 +105,6 @@ public enum c {
     }
 
     public final String a() {
-        return this.h;
+        return this.name;
     }
 }

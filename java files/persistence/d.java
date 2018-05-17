@@ -2,6 +2,7 @@ package persistence;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 // Linux persistence.
@@ -23,20 +24,24 @@ public final class d extends a {
 
         File var1 = new File(b(), super.b + ".desktop");
         PrintWriter var2;
-        (var2 = new PrintWriter(new FileWriter(var1))).println("[Desktop Entry]");
-        var2.println("Type=Application");
-        var2.println("Name=" + super.b);
-        if (this.a) {
-            var2.println("Exec=java -jar '" + super.c + "'");
-        } else {
-            var2.println("Exec=" + super.c);
-        }
+        try {
+            (var2 = new PrintWriter(new FileWriter(var1))).println("[Desktop Entry]");
+            var2.println("Type=Application");
+            var2.println("Name=" + super.b);
+            if (this.a) {
+                var2.println("Exec=java -jar '" + super.c + "'");
+            } else {
+                var2.println("Exec=" + super.c);
+            }
 
-        var2.println("Terminal=false");
-        var2.println("NoDisplay=true");
-        var2.close();
-        // Must set the executable bit on the .desktop file for it to work.
-        String[] var3 = new String[]{"chmod", "+x", super.c};
-        Runtime.getRuntime().exec(var3);
+            var2.println("Terminal=false");
+            var2.println("NoDisplay=true");
+            var2.close();
+            // Must set the executable bit on the .desktop file for it to work.
+            String[] var3 = new String[]{"chmod", "+x", super.c};
+            Runtime.getRuntime().exec(var3);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
