@@ -291,6 +291,7 @@ public final class b {
         }
     }
 
+    // maybe..? move path(file or dir) from "~/var0" to "~/var1"
     public static void b(File var0, File var1) {
         if (!var0.exists()) {
             throw new FileNotFoundException("Source '" + var0 + "' does not exist");
@@ -299,11 +300,13 @@ public final class b {
         } else if (var1.exists()) {
             throw new a("Destination '" + var1 + "' already exists");
         } else {
+            // using renameTo function
             if (!var0.renameTo(var1)) {
                 if (var1.getCanonicalPath().startsWith(var0.getCanonicalPath() + File.separator)) {
                     throw new IOException("Cannot move directory: " + var0 + " to a subdirectory of itself: " + var1);
                 }
 
+                // maybe just for checking because we cannot trust renameTo function
                 c(var0, var1);
                 b(var0);
                 if (var0.exists()) {

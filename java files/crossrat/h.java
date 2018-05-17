@@ -28,6 +28,7 @@ final class h extends Thread {
         if (var1.exists()) {
             try {
                 org.a.a.a.b.b(var1, var2);
+                // success to rename path (move directory or file to var2)
                 this.c = "1";
             } catch (IOException var6) {
                 this.c = "0";
